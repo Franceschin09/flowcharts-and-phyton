@@ -1,0 +1,354 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Area quadrato con controllo"/>
+        <attribute name="authors" value="Frank"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-09 11:43:23 "/>
+        <attribute name="created" value="RnJhbms7TEFQVE9QLUFIVDIwMkpEOzIwMjQtMTAtMDk7IjEwOjM5OjAxICI7MjcwNQ=="/>
+        <attribute name="edited" value="RnJhbms7TEFQVE9QLUFIVDIwMkpEOzIwMjQtMTAtMDk7IjExOjQzOjIzICI7NDsyODE2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="L, A" type="Real" array="False" size=""/>
+            <output expression="&quot;Ciao calcoliamo l'aria di un quadrato Dammi il lato del quadrato&quot;" newline="True"/>
+            <input variable="L"/>
+            <while expression="L&lt;=0">
+                <output expression="&quot;Scemo!Dammi un lato positivo&quot;" newline="True"/>
+                <input variable="L"/>
+            </while>
+            <output expression="&quot;Calcolo l'aria del quadrato&quot;" newline="True"/>
+            <assign variable="A" expression="L^2"/>
+            <output expression="&quot;L'aria del quadrato &#232;:&quot;" newline="True"/>
+            <output expression="A" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
+print("Ciao calcoliamo l'aria di un quadrato Dammi il lato del quadrato")
+l = float(input())
+while l <= 0:
+    print("Scemo!Dammi un lato positivo")
+    l = float(input())
+print("Calcolo l'aria del quadrato")
+a = l ** 2
+print("L'aria del quadrato è:")
+print(a)
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Calcolo aria triangolo e quadrato"/>
+        <attribute name="authors" value="Frank"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-17 08:34:18 "/>
+        <attribute name="created" value="RnJhbms7TEFQVE9QLUFIVDIwMkpEOzIwMjQtMTAtMTc7IjA4OjA3OjE5ICI7MjcxNQ=="/>
+        <attribute name="edited" value="RnJhbms7TEFQVE9QLUFIVDIwMkpEOzIwMjQtMTAtMTc7IjA4OjM0OjE4ICI7MjsyODIz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A, L, B, h" type="Real" array="False" size=""/>
+            <declare name="Scelta" type="String" array="False" size=""/>
+            <output expression="&quot;Ciao, scrivi Q per calcolare l'area del quadrato oppure T per l'aria del triangolo&quot;" newline="True"/>
+            <input variable="Scelta"/>
+            <if expression="Scelta==&quot;Q&quot;">
+                <then>
+                    <output expression="&quot;Hai selezionato quadrato, dammi la misura del lato&quot;" newline="True"/>
+                    <input variable="L"/>
+                    <while expression="L&lt;=0">
+                        <output expression="&quot;Selezionare un lato positivo&quot;" newline="True"/>
+                        <input variable="L"/>
+                    </while>
+                    <output expression="&quot;Calcolo l'aria...&quot;" newline="True"/>
+                    <assign variable="A" expression="L^2"/>
+                </then>
+                <else>
+                    <if expression="Scelta==&quot;T&quot;">
+                        <then>
+                            <output expression="&quot;Hai selezionato triangolo, dammi la misura della base&quot;" newline="True"/>
+                            <input variable="B"/>
+                            <while expression="B&lt;=0">
+                                <output expression="&quot;Selezionare una base positiva&quot;" newline="True"/>
+                                <input variable="B"/>
+                            </while>
+                            <output expression="&quot;Dammi l'altezza&quot;" newline="True"/>
+                            <input variable="h"/>
+                            <while expression="h&lt;=0">
+                                <output expression="&quot;Selezionare un'altezza positiva&quot;" newline="True"/>
+                                <input variable="h"/>
+                            </while>
+                            <assign variable="A" expression="B^h/2"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;T'avevo detto di scegliere T o Q&quot;" newline="True"/>
+                            <assign variable="A" expression="0"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;L'aria della figura &#232;:&quot;" newline="True"/>
+            <output expression="A" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
+print("Ciao, scrivi Q per calcolare l'area del quadrato oppure T per l'aria del triangolo")
+scelta = input()
+if scelta == "Q":
+    print("Hai selezionato quadrato, dammi la misura del lato")
+    l = float(input())
+    while l <= 0:
+        print("Selezionare un lato positivo")
+        l = float(input())
+    print("Calcolo l'aria...")
+    a = l ** 2
+else:
+    if scelta == "T":
+        print("Hai selezionato triangolo, dammi la misura della base")
+        b = float(input())
+        while b <= 0:
+            print("Selezionare una base positiva")
+            b = float(input())
+        print("Dammi l'altezza")
+        h = float(input())
+        while h <= 0:
+            print("Selezionare un'altezza positiva")
+            h = float(input())
+        a = b ** h / 2
+    else:
+        print("T'avevo detto di scegliere T o Q")
+        a = 0
+print("L'aria della figura è:")
+print(a)
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="carta,forbice,sasso"/>
+        <attribute name="authors" value="Frank"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-23 11:28:58 "/>
+        <attribute name="created" value="RnJhbms7TEFQVE9QLUFIVDIwMkpEOzIwMjQtMTAtMjM7IjEwOjE0OjU5ICI7MjcwNw=="/>
+        <attribute name="edited" value="RnJhbms7TEFQVE9QLUFIVDIwMkpEOzIwMjQtMTAtMjM7IjExOjA5OjQ2ICI7MTtGcmFuaztMQVBUT1AtQUhUMjAySkQ7MjAyNC0xMC0yMzsiMTA6MTQ6NTkgIjs1NTgy"/>
+        <attribute name="edited" value="RnJhbms7TEFQVE9QLUFIVDIwMkpEOzIwMjQtMTAtMjM7IjExOjI4OjU4ICI7NzsyODI2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="scelta, computer" type="String" array="False" size=""/>
+            <declare name="numero" type="Integer" array="False" size=""/>
+            <output expression="&quot;Carta,forbice o sasso?&quot;" newline="True"/>
+            <input variable="scelta"/>
+            <while expression="scelta!=&quot;carta&quot; and scelta!=&quot;forbici&quot; and scelta!=&quot;sasso&quot; and scelta!=&quot;esci&quot;">
+                <output expression="&quot;devi scegliere tra: carta sasso o forbici&quot;" newline="True"/>
+                <input variable="scelta"/>
+            </while>
+            <while expression="scelta!=&quot;esci&quot;">
+                <while expression="scelta!=&quot;carta&quot; and scelta!=&quot;forbici&quot; and scelta!=&quot;sasso&quot;">
+                    <output expression="&quot;devi scegliere tra: carta sasso o forbici&quot;" newline="True"/>
+                    <input variable="scelta"/>
+                </while>
+                <assign variable="numero" expression="random(2)"/>
+                <if expression="numero==0">
+                    <then>
+                        <assign variable="computer" expression="&quot;carta&quot;"/>
+                    </then>
+                    <else>
+                        <if expression="numero==1">
+                            <then>
+                                <assign variable="computer" expression="&quot;forbici&quot;"/>
+                            </then>
+                            <else>
+                                <assign variable="computer" expression="&quot;sasso&quot;"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <if expression="scelta==&quot;carta&quot; and computer==&quot;sasso&quot; or scelta==&quot;forbici&quot; and computer==&quot;carta&quot; or scelta==&quot;sasso&quot; and computer==&quot;forbici&quot;">
+                    <then>
+                        <output expression="computer" newline="True"/>
+                        <output expression="&quot;hai vinto&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="scelta==&quot;carta&quot; and computer==&quot;carta&quot; or scelta==&quot;forbici&quot; and computer==&quot;forbici&quot; or scelta==&quot;sasso&quot; and computer==&quot;sasso&quot;">
+                            <then>
+                                <output expression="computer" newline="True"/>
+                                <output expression="&quot;Pareggio&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="computer" newline="True"/>
+                                <output expression="&quot;Hai perso&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;rematch? (scrivi esci per uscire)&quot;" newline="True"/>
+                <input variable="scelta"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
+import random
+random.seed()   #Prepare random number generator
+
+print("Carta,forbice o sasso?")
+scelta = input()
+while scelta != "carta" and scelta != "forbici" and scelta != "sasso" and scelta != "esci":
+    print("devi scegliere tra: carta sasso o forbici")
+    scelta = input()
+while scelta != "esci":
+    while scelta != "carta" and scelta != "forbici" and scelta != "sasso":
+        print("devi scegliere tra: carta sasso o forbici")
+        scelta = input()
+    numero = int(random.random() * 2)
+    if numero == 0:
+        computer = "carta"
+    else:
+        if numero == 1:
+            computer = "forbici"
+        else:
+            computer = "sasso"
+    if scelta == "carta" and computer == "sasso" or scelta == "forbici" and computer == "carta" or scelta == "sasso" and computer == "forbici":
+        print(computer)
+        print("hai vinto")
+    else:
+        if scelta == "carta" and computer == "carta" or scelta == "forbici" and computer == "forbici" or scelta == "sasso" and computer == "sasso":
+            print(computer)
+            print("Pareggio")
+        else:
+            print(computer)
+            print("Hai perso")
+    print("rematch? (scrivi esci per uscire)")
+    scelta = input()
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="controllo se numero dispari o pari"/>
+        <attribute name="authors" value="Frank"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-17 08:50:55 "/>
+        <attribute name="created" value="RnJhbms7TEFQVE9QLUFIVDIwMkpEOzIwMjQtMTAtMTc7IjA4OjM4OjI4ICI7MjcxOQ=="/>
+        <attribute name="edited" value="RnJhbms7TEFQVE9QLUFIVDIwMkpEOzIwMjQtMTAtMTc7IjA4OjUwOjU1ICI7MjsyODIy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero" type="Integer" array="False" size=""/>
+            <output expression="&quot;Dammi un numero&quot;" newline="True"/>
+            <input variable="numero"/>
+            <if expression="numero&lt;0">
+                <then>
+                    <output expression="&quot;numero maggiore di zero&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="numero==0">
+                        <then>
+                            <output expression="&quot;numero uguale a zero&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;numero minore di zero&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="numero%2=0">
+                <then>
+                    <output expression="&quot;numero pari&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;numero dispari&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
+print("Dammi un numero")
+numero = int(input())
+if numero < 0:
+    print("numero maggiore di zero")
+else:
+    if numero == 0:
+        print("numero uguale a zero")
+    else:
+        print("numero minore di zero")
+if numero % 2 == 0:
+    print("numero pari")
+else:
+    print("numero dispari")
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Fattoriale di un numero"/>
+        <attribute name="authors" value="Frank"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-21 11:38:39 "/>
+        <attribute name="created" value="RnJhbms7TEFQVE9QLUFIVDIwMkpEOzIwMjQtMTAtMjE7IjExOjEyOjE3ICI7MjY5OA=="/>
+        <attribute name="edited" value="RnJhbms7TEFQVE9QLUFIVDIwMkpEOzIwMjQtMTAtMjE7IjExOjM4OjM5ICI7MjsyODE5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lista, quadrati" type="Integer" array="True" size="3"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Ciao calcolo il quadrato di tutti gli elementi nella lista&quot;" newline="True"/>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <input variable="lista[i]"/>
+            </for>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <assign variable="quadrati[i]" expression="lista[i]^2"/>
+                <output expression="lista[i]" newline="True"/>
+                <output expression="quadrati[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
+lista = [0] * (3)
+quadrati = [0] * (3)
+
+print("Ciao calcolo il quadrato di tutti gli elementi nella lista")
+for i in range(0, 2 + 1, 1):
+    lista[i] = int(input())
+for i in range(0, 2 + 1, 1):
+    quadrati[i] = lista[i] ** 2
+    print(lista[i])
+    print(quadrati[i])
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="lista fattoriali"/>
+        <attribute name="authors" value="Frank"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-21 11:47:46 "/>
+        <attribute name="created" value="RnJhbms7TEFQVE9QLUFIVDIwMkpEOzIwMjQtMTAtMjE7IjExOjM5OjM2ICI7MjcwOA=="/>
+        <attribute name="edited" value="RnJhbms7TEFQVE9QLUFIVDIwMkpEOzIwMjQtMTAtMjE7IjExOjQ3OjQ2ICI7MTsyODE2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lista, fattoriali" type="Integer" array="True" size="3"/>
+            <declare name="i, k, risultato" type="Integer" array="False" size=""/>
+            <output expression="&quot;dammi 3 numeri dei quali vuoi il fattoriale&quot;" newline="True"/>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <input variable="lista[i]"/>
+            </for>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <assign variable="risultato" expression="1"/>
+                <for variable="k" start="1" end="lista[i]" direction="inc" step="1">
+                    <assign variable="risultato" expression="risultato*k"/>
+                    <assign variable="fattoriali[i]" expression="risultato"/>
+                </for>
+                <output expression="fattoriali[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
+lista = [0] * (3)
+fattoriali = [0] * (3)
+
+print("dammi 3 numeri dei quali vuoi il fattoriale")
+for i in range(0, 2 + 1, 1):
+    lista[i] = int(input())
+for i in range(0, 2 + 1, 1):
+    risultato = 1
+    for k in range(1, lista[i] + 1, 1):
+        risultato = risultato * k
+        fattoriali[i] = risultato
+    print(fattoriali[i])
